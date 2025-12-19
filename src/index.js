@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoos from "mongoose";
 import { DB_NAME } from "./constants.js";
 import express from "express";
+import app from "./app.js";
 import connectDB from "./db/index.js";
 
 dotenv.config({ path: "./.env" });

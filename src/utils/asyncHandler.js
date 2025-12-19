@@ -1,11 +1,11 @@
 const asyncHandler = (requestHandler) => {
-    (req, res, next) => {
-        Promise.resolve(requestHandler(req, res, next)).catch((error) => next(error));
+    return (req, res, next) => {
+        Promise
+            .resolve(requestHandler(req, res, next))
+            .catch((error) => next(error));
     }
 }
-
-export { asyncHandler }
-
+export { asyncHandler };
 
 //Try Catch Method for handling async errors in express routes
 
